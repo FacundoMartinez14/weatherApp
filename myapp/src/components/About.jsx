@@ -18,7 +18,7 @@ export default function About() {
 				<li className="flex">
 					<img
 						src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
-						alt="figma"
+						alt="React"
 						width="20"
 						height="20"
 					/>
@@ -27,7 +27,7 @@ export default function About() {
 				<li className="flex">
 					<img
 						src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg"
-						alt="figma"
+						alt="Tailwind"
 						width="20"
 						height="20"
 					/>
@@ -44,7 +44,7 @@ export default function About() {
 					href="mailto:facundo.ee2@gmail.com"
 					className="text-blue font-bold hover:underline "
 				>
-					contact me
+					contact me.
 				</a>
 			</h4>
 		</div>
