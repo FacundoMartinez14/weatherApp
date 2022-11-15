@@ -3,17 +3,23 @@ import { useState } from 'react';
 import SearchBar from './SearchBar.jsx';
 import './Nav.css';
 import { Link } from 'react-router-dom';
+import logo from '../imgs/wheather-app.png';
+import { Route } from 'react-router-dom';
 
 export default function NavBar({ onSearch }) {
 	const [navbar, setNavbar] = useState(false);
 
 	return (
-		<nav className="w-full bg-purple-500 shadow">
+		<nav className="w-full bg-blue shadow">
 			<div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
 				<div>
 					<div className="flex items-center justify-between py-3 md:py-5 md:block">
-						<Link to="/">
-							<span className="navbar-brand">Weather App</span>
+						<Link to="/" className="flex flex-row">
+							<span className="text-white font-bold text-lg transition duration-200 hover:text-gray-lighter">
+								Weather App
+							</span>
+							&nbsp;&nbsp;
+							<img src={logo} alt="Logo" />
 						</Link>
 						<div className="md:hidden">
 							<button
@@ -59,21 +65,21 @@ export default function NavBar({ onSearch }) {
 							navbar ? 'block' : 'hidden'
 						}`}
 					>
-						<ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-							<li className="text-white hover:text-indigo-200">
+						<ul className="items-center justify-center inline-block space-y-8 md:flex md:space-x-6 md:space-y-0">
+							<li className="text-white block px-2 rounded transition-all duration-200 hover:text-gray-lighter hover:bg-white hover:text-blue ">
 								<a href="https://github.com/FacundoMartinez14">GitHub</a>
 							</li>
-							<li className="text-white hover:text-indigo-200">
-              <Link to='/about'> About ME</Link>
+							<li className="text-white px-2 rounded transition-all duration-200 hover:text-gray-lighter hover:bg-white hover:text-blue ">
+								<Link to="/about">About ME</Link>
 							</li>
-							<li className="text-white hover:text-indigo-200">
+							<li className="text-white px-2 rounded transition-all duration-200 hover:text-gray-lighter hover:bg-white hover:text-blue ">
 								<a href="mailto:facundo.eet2@gmail.com">Contact Me</a>
 							</li>
 						</ul>
 					</div>
 				</div>
 				<div className="space-x-2 md:inline-block">
-					<SearchBar onSearch={onSearch} />
+						<SearchBar onSearch={onSearch} />
 				</div>
 			</div>
 		</nav>
